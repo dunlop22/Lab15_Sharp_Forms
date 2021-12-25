@@ -33,5 +33,9 @@ namespace Lab15_Sharp_Forms
                 form1.Koleso_perimetr.Text = "Данных недостаточно!";
             }
         }
+        public double visota;
+        public double shirina;
+        public double diametr;
+        public string tip_diska;
     }
 }

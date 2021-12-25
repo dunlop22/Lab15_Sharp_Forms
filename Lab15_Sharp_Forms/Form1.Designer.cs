@@ -54,13 +54,51 @@ namespace Lab15_Sharp_Forms
             this.Koleso_Tip_diska_Label = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Zapaska_check = new System.Windows.Forms.CheckBox();
             this.Koleso_Obem_Label = new System.Windows.Forms.Label();
             this.Koleso_Perimetr_Label = new System.Windows.Forms.Label();
             this.Koleso_Obem = new System.Windows.Forms.TextBox();
             this.Koleso_perimetr = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Zapaska_Obem_Label = new System.Windows.Forms.Label();
+            this.Zapaska_Perimetr_Label = new System.Windows.Forms.Label();
+            this.Zapaska_obem = new System.Windows.Forms.TextBox();
+            this.Zapaska_Perimetr = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Zapaska_Shirina = new System.Windows.Forms.TextBox();
+            this.Zapaska_Visota = new System.Windows.Forms.TextBox();
+            this.Zapaska_Tip_diska_Label = new System.Windows.Forms.Label();
+            this.Zapaska_Diametr = new System.Windows.Forms.TextBox();
+            this.Zapaska_Diametr_Label = new System.Windows.Forms.Label();
+            this.Zapaska_Tip_diska = new System.Windows.Forms.TextBox();
+            this.Zapaska_Visota_Label = new System.Windows.Forms.Label();
+            this.Zapaska_Shirina_Label = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Clean_Table = new System.Windows.Forms.Button();
+            this.Clean_Kolesa = new System.Windows.Forms.Button();
+            this.Koleso_ADD = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diametr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shirina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Visota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tip_diska = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Group_Koleso_Search = new System.Windows.Forms.GroupBox();
+            this.Koleso_Search_Clean = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
+            this.Koleso_Search_Visota_Label = new System.Windows.Forms.Label();
+            this.Koleso_Search_Shirina_Label = new System.Windows.Forms.Label();
+            this.Koleso_Search_Diametr_Label = new System.Windows.Forms.Label();
+            this.Koleso_Search_Visota = new System.Windows.Forms.TextBox();
+            this.Koleso_Search_Shirina = new System.Windows.Forms.TextBox();
+            this.Koleso_Search_Diametr = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Group_Koleso_Search.SuspendLayout();
             this.SuspendLayout();
             // 
             // Motor_Name
@@ -284,6 +322,7 @@ namespace Lab15_Sharp_Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Zapaska_check);
             this.groupBox2.Controls.Add(this.Koleso_Obem_Label);
             this.groupBox2.Controls.Add(this.Koleso_Perimetr_Label);
             this.groupBox2.Controls.Add(this.Koleso_Obem);
@@ -303,6 +342,17 @@ namespace Lab15_Sharp_Forms
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Колесо";
+            // 
+            // Zapaska_check
+            // 
+            this.Zapaska_check.AutoSize = true;
+            this.Zapaska_check.Location = new System.Drawing.Point(32, 217);
+            this.Zapaska_check.Name = "Zapaska_check";
+            this.Zapaska_check.Size = new System.Drawing.Size(218, 19);
+            this.Zapaska_check.TabIndex = 30;
+            this.Zapaska_check.Text = "Запасное колесо полноразмерное";
+            this.Zapaska_check.UseVisualStyleBackColor = true;
+            this.Zapaska_check.CheckedChanged += new System.EventHandler(this.Zapaska_check_CheckedChanged);
             // 
             // Koleso_Obem_Label
             // 
@@ -348,9 +398,314 @@ namespace Lab15_Sharp_Forms
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Zapaska_Obem_Label);
+            this.groupBox3.Controls.Add(this.Zapaska_Perimetr_Label);
+            this.groupBox3.Controls.Add(this.Zapaska_obem);
+            this.groupBox3.Controls.Add(this.Zapaska_Perimetr);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.Zapaska_Shirina);
+            this.groupBox3.Controls.Add(this.Zapaska_Visota);
+            this.groupBox3.Controls.Add(this.Zapaska_Tip_diska_Label);
+            this.groupBox3.Controls.Add(this.Zapaska_Diametr);
+            this.groupBox3.Controls.Add(this.Zapaska_Diametr_Label);
+            this.groupBox3.Controls.Add(this.Zapaska_Tip_diska);
+            this.groupBox3.Controls.Add(this.Zapaska_Visota_Label);
+            this.groupBox3.Controls.Add(this.Zapaska_Shirina_Label);
+            this.groupBox3.Location = new System.Drawing.Point(715, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(357, 434);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Запасное колесо";
+            // 
+            // Zapaska_Obem_Label
+            // 
+            this.Zapaska_Obem_Label.AutoSize = true;
+            this.Zapaska_Obem_Label.Location = new System.Drawing.Point(97, 371);
+            this.Zapaska_Obem_Label.Name = "Zapaska_Obem_Label";
+            this.Zapaska_Obem_Label.Size = new System.Drawing.Size(48, 15);
+            this.Zapaska_Obem_Label.TabIndex = 29;
+            this.Zapaska_Obem_Label.Text = "Объем:";
+            // 
+            // Zapaska_Perimetr_Label
+            // 
+            this.Zapaska_Perimetr_Label.AutoSize = true;
+            this.Zapaska_Perimetr_Label.Location = new System.Drawing.Point(79, 318);
+            this.Zapaska_Perimetr_Label.Name = "Zapaska_Perimetr_Label";
+            this.Zapaska_Perimetr_Label.Size = new System.Drawing.Size(66, 15);
+            this.Zapaska_Perimetr_Label.TabIndex = 28;
+            this.Zapaska_Perimetr_Label.Text = "Периметр:";
+            // 
+            // Zapaska_obem
+            // 
+            this.Zapaska_obem.Location = new System.Drawing.Point(200, 368);
+            this.Zapaska_obem.Name = "Zapaska_obem";
+            this.Zapaska_obem.ReadOnly = true;
+            this.Zapaska_obem.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_obem.TabIndex = 27;
+            // 
+            // Zapaska_Perimetr
+            // 
+            this.Zapaska_Perimetr.Location = new System.Drawing.Point(200, 315);
+            this.Zapaska_Perimetr.Name = "Zapaska_Perimetr";
+            this.Zapaska_Perimetr.ReadOnly = true;
+            this.Zapaska_Perimetr.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_Perimetr.TabIndex = 26;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(139, 264);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Расчет";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // Zapaska_Shirina
+            // 
+            this.Zapaska_Shirina.Location = new System.Drawing.Point(200, 33);
+            this.Zapaska_Shirina.Name = "Zapaska_Shirina";
+            this.Zapaska_Shirina.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_Shirina.TabIndex = 16;
+            // 
+            // Zapaska_Visota
+            // 
+            this.Zapaska_Visota.Location = new System.Drawing.Point(200, 76);
+            this.Zapaska_Visota.Name = "Zapaska_Visota";
+            this.Zapaska_Visota.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_Visota.TabIndex = 17;
+            // 
+            // Zapaska_Tip_diska_Label
+            // 
+            this.Zapaska_Tip_diska_Label.AutoSize = true;
+            this.Zapaska_Tip_diska_Label.Location = new System.Drawing.Point(80, 168);
+            this.Zapaska_Tip_diska_Label.Name = "Zapaska_Tip_diska_Label";
+            this.Zapaska_Tip_diska_Label.Size = new System.Drawing.Size(65, 15);
+            this.Zapaska_Tip_diska_Label.TabIndex = 24;
+            this.Zapaska_Tip_diska_Label.Text = "Тип диска:";
+            // 
+            // Zapaska_Diametr
+            // 
+            this.Zapaska_Diametr.Location = new System.Drawing.Point(200, 121);
+            this.Zapaska_Diametr.Name = "Zapaska_Diametr";
+            this.Zapaska_Diametr.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_Diametr.TabIndex = 18;
+            // 
+            // Zapaska_Diametr_Label
+            // 
+            this.Zapaska_Diametr_Label.AutoSize = true;
+            this.Zapaska_Diametr_Label.Location = new System.Drawing.Point(87, 124);
+            this.Zapaska_Diametr_Label.Name = "Zapaska_Diametr_Label";
+            this.Zapaska_Diametr_Label.Size = new System.Drawing.Size(58, 15);
+            this.Zapaska_Diametr_Label.TabIndex = 23;
+            this.Zapaska_Diametr_Label.Text = "Диаметр:";
+            // 
+            // Zapaska_Tip_diska
+            // 
+            this.Zapaska_Tip_diska.Location = new System.Drawing.Point(200, 165);
+            this.Zapaska_Tip_diska.Name = "Zapaska_Tip_diska";
+            this.Zapaska_Tip_diska.Size = new System.Drawing.Size(100, 23);
+            this.Zapaska_Tip_diska.TabIndex = 19;
+            // 
+            // Zapaska_Visota_Label
+            // 
+            this.Zapaska_Visota_Label.AutoSize = true;
+            this.Zapaska_Visota_Label.Location = new System.Drawing.Point(95, 79);
+            this.Zapaska_Visota_Label.Name = "Zapaska_Visota_Label";
+            this.Zapaska_Visota_Label.Size = new System.Drawing.Size(50, 15);
+            this.Zapaska_Visota_Label.TabIndex = 22;
+            this.Zapaska_Visota_Label.Text = "Высота:";
+            // 
+            // Zapaska_Shirina_Label
+            // 
+            this.Zapaska_Shirina_Label.AutoSize = true;
+            this.Zapaska_Shirina_Label.Location = new System.Drawing.Point(90, 36);
+            this.Zapaska_Shirina_Label.Name = "Zapaska_Shirina_Label";
+            this.Zapaska_Shirina_Label.Size = new System.Drawing.Size(55, 15);
+            this.Zapaska_Shirina_Label.TabIndex = 21;
+            this.Zapaska_Shirina_Label.Text = "Ширина:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.Clean_Table);
+            this.groupBox4.Controls.Add(this.Clean_Kolesa);
+            this.groupBox4.Controls.Add(this.Koleso_ADD);
+            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Location = new System.Drawing.Point(1078, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(732, 804);
+            this.groupBox4.TabIndex = 28;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Склад колес";
+            // 
+            // Clean_Table
+            // 
+            this.Clean_Table.Location = new System.Drawing.Point(114, 663);
+            this.Clean_Table.Name = "Clean_Table";
+            this.Clean_Table.Size = new System.Drawing.Size(174, 87);
+            this.Clean_Table.TabIndex = 3;
+            this.Clean_Table.Text = "Вывести актуальный список колес на складе";
+            this.Clean_Table.UseVisualStyleBackColor = true;
+            this.Clean_Table.Click += new System.EventHandler(this.Clean_Table_Click);
+            // 
+            // Clean_Kolesa
+            // 
+            this.Clean_Kolesa.Location = new System.Drawing.Point(451, 658);
+            this.Clean_Kolesa.Name = "Clean_Kolesa";
+            this.Clean_Kolesa.Size = new System.Drawing.Size(231, 92);
+            this.Clean_Kolesa.TabIndex = 2;
+            this.Clean_Kolesa.Text = "Очистить список колес";
+            this.Clean_Kolesa.UseVisualStyleBackColor = true;
+            this.Clean_Kolesa.Click += new System.EventHandler(this.Clean_Kolesa_Click);
+            // 
+            // Koleso_ADD
+            // 
+            this.Koleso_ADD.Location = new System.Drawing.Point(113, 36);
+            this.Koleso_ADD.Name = "Koleso_ADD";
+            this.Koleso_ADD.Size = new System.Drawing.Size(410, 75);
+            this.Koleso_ADD.TabIndex = 1;
+            this.Koleso_ADD.Text = "Добавить";
+            this.Koleso_ADD.UseVisualStyleBackColor = true;
+            this.Koleso_ADD.Click += new System.EventHandler(this.Koleso_ADD_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.Diametr,
+            this.Shirina,
+            this.Visota,
+            this.Tip_diska});
+            this.dataGridView1.Location = new System.Drawing.Point(25, 165);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(701, 445);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // Diametr
+            // 
+            this.Diametr.HeaderText = "Диаметр";
+            this.Diametr.Name = "Diametr";
+            this.Diametr.ReadOnly = true;
+            // 
+            // Shirina
+            // 
+            this.Shirina.HeaderText = "Ширина";
+            this.Shirina.Name = "Shirina";
+            this.Shirina.ReadOnly = true;
+            // 
+            // Visota
+            // 
+            this.Visota.HeaderText = "Высота";
+            this.Visota.Name = "Visota";
+            this.Visota.ReadOnly = true;
+            // 
+            // Tip_diska
+            // 
+            this.Tip_diska.HeaderText = "Тип диска";
+            this.Tip_diska.Name = "Tip_diska";
+            this.Tip_diska.ReadOnly = true;
+            // 
+            // Group_Koleso_Search
+            // 
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Clean);
+            this.Group_Koleso_Search.Controls.Add(this.Search);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Visota_Label);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Shirina_Label);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Diametr_Label);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Visota);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Shirina);
+            this.Group_Koleso_Search.Controls.Add(this.Koleso_Search_Diametr);
+            this.Group_Koleso_Search.Location = new System.Drawing.Point(166, 519);
+            this.Group_Koleso_Search.Name = "Group_Koleso_Search";
+            this.Group_Koleso_Search.Size = new System.Drawing.Size(567, 220);
+            this.Group_Koleso_Search.TabIndex = 29;
+            this.Group_Koleso_Search.TabStop = false;
+            this.Group_Koleso_Search.Text = "Поиск колеса по заданным параметрам";
+            // 
+            // Koleso_Search_Clean
+            // 
+            this.Koleso_Search_Clean.Location = new System.Drawing.Point(407, 135);
+            this.Koleso_Search_Clean.Name = "Koleso_Search_Clean";
+            this.Koleso_Search_Clean.Size = new System.Drawing.Size(125, 47);
+            this.Koleso_Search_Clean.TabIndex = 2;
+            this.Koleso_Search_Clean.Text = "Очистить параметры поиска";
+            this.Koleso_Search_Clean.UseVisualStyleBackColor = true;
+            this.Koleso_Search_Clean.Click += new System.EventHandler(this.Koleso_Search_Clean_Click);
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(407, 80);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(125, 40);
+            this.Search.TabIndex = 6;
+            this.Search.Text = "Поиск";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // Koleso_Search_Visota_Label
+            // 
+            this.Koleso_Search_Visota_Label.AutoSize = true;
+            this.Koleso_Search_Visota_Label.Location = new System.Drawing.Point(154, 131);
+            this.Koleso_Search_Visota_Label.Name = "Koleso_Search_Visota_Label";
+            this.Koleso_Search_Visota_Label.Size = new System.Drawing.Size(50, 15);
+            this.Koleso_Search_Visota_Label.TabIndex = 5;
+            this.Koleso_Search_Visota_Label.Text = "Высота:";
+            // 
+            // Koleso_Search_Shirina_Label
+            // 
+            this.Koleso_Search_Shirina_Label.AutoSize = true;
+            this.Koleso_Search_Shirina_Label.Location = new System.Drawing.Point(149, 101);
+            this.Koleso_Search_Shirina_Label.Name = "Koleso_Search_Shirina_Label";
+            this.Koleso_Search_Shirina_Label.Size = new System.Drawing.Size(55, 15);
+            this.Koleso_Search_Shirina_Label.TabIndex = 4;
+            this.Koleso_Search_Shirina_Label.Text = "Ширина:";
+            // 
+            // Koleso_Search_Diametr_Label
+            // 
+            this.Koleso_Search_Diametr_Label.AutoSize = true;
+            this.Koleso_Search_Diametr_Label.Location = new System.Drawing.Point(146, 71);
+            this.Koleso_Search_Diametr_Label.Name = "Koleso_Search_Diametr_Label";
+            this.Koleso_Search_Diametr_Label.Size = new System.Drawing.Size(58, 15);
+            this.Koleso_Search_Diametr_Label.TabIndex = 3;
+            this.Koleso_Search_Diametr_Label.Text = "Диаметр:";
+            // 
+            // Koleso_Search_Visota
+            // 
+            this.Koleso_Search_Visota.Location = new System.Drawing.Point(244, 128);
+            this.Koleso_Search_Visota.Name = "Koleso_Search_Visota";
+            this.Koleso_Search_Visota.Size = new System.Drawing.Size(100, 23);
+            this.Koleso_Search_Visota.TabIndex = 2;
+            // 
+            // Koleso_Search_Shirina
+            // 
+            this.Koleso_Search_Shirina.Location = new System.Drawing.Point(244, 98);
+            this.Koleso_Search_Shirina.Name = "Koleso_Search_Shirina";
+            this.Koleso_Search_Shirina.Size = new System.Drawing.Size(100, 23);
+            this.Koleso_Search_Shirina.TabIndex = 1;
+            // 
+            // Koleso_Search_Diametr
+            // 
+            this.Koleso_Search_Diametr.Location = new System.Drawing.Point(244, 68);
+            this.Koleso_Search_Diametr.Name = "Koleso_Search_Diametr";
+            this.Koleso_Search_Diametr.Size = new System.Drawing.Size(100, 23);
+            this.Koleso_Search_Diametr.TabIndex = 0;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1811, 828);
+            this.Controls.Add(this.Group_Koleso_Search);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -360,6 +715,12 @@ namespace Lab15_Sharp_Forms
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Group_Koleso_Search.ResumeLayout(false);
+            this.Group_Koleso_Search.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -396,6 +757,40 @@ namespace Lab15_Sharp_Forms
         public System.Windows.Forms.TextBox Koleso_Obem;
         public System.Windows.Forms.TextBox Koleso_perimetr;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox Zapaska_check;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label Zapaska_Obem_Label;
+        private System.Windows.Forms.Label Zapaska_Perimetr_Label;
+        public System.Windows.Forms.TextBox Zapaska_obem;
+        public System.Windows.Forms.TextBox Zapaska_Perimetr;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox Zapaska_Shirina;
+        public System.Windows.Forms.TextBox Zapaska_Visota;
+        private System.Windows.Forms.Label Zapaska_Tip_diska_Label;
+        public System.Windows.Forms.TextBox Zapaska_Diametr;
+        private System.Windows.Forms.Label Zapaska_Diametr_Label;
+        public System.Windows.Forms.TextBox Zapaska_Tip_diska;
+        private System.Windows.Forms.Label Zapaska_Visota_Label;
+        private System.Windows.Forms.Label Zapaska_Shirina_Label;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button Clean_Table;
+        private System.Windows.Forms.Button Clean_Kolesa;
+        private System.Windows.Forms.Button Koleso_ADD;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diametr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shirina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Visota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tip_diska;
+        private System.Windows.Forms.GroupBox Group_Koleso_Search;
+        private System.Windows.Forms.Button Koleso_Search_Clean;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Label Koleso_Search_Visota_Label;
+        private System.Windows.Forms.Label Koleso_Search_Shirina_Label;
+        private System.Windows.Forms.Label Koleso_Search_Diametr_Label;
+        private System.Windows.Forms.TextBox Koleso_Search_Visota;
+        private System.Windows.Forms.TextBox Koleso_Search_Shirina;
+        private System.Windows.Forms.TextBox Koleso_Search_Diametr;
     }
 }
 
